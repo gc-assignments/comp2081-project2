@@ -1,0 +1,22 @@
+{
+  "name": "project2",
+  "version": "0.1.0",
+  "authors": [
+    "Slevin Zhang <4ce111@gmail.com>"
+  ],
+  "description": "assignment project",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jeet": "~6.1.2"
+  },
+  "dependencies": {
+    "zepto": "~1.1.6"
+  }
+}

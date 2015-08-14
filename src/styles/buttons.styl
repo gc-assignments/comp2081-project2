@@ -1,0 +1,70 @@
+/**
+ * 3D button credit: http://codepen.io/zootia/pen/MweMmB?editors=110
+ */
+.btn-wrap
+  margin 25px
+
+.btn
+  white-space nowrap
+  top 0
+  border-radius 5px
+  position relative
+  border none
+  background none
+  width 180px
+  height 60px
+  cursor pointer
+  transition 0.1s all ease
+  font-size 24px
+  font-weight 300
+  box-shadow 0 0 0 0 #B8B8B8
+  margin-bottom 1.5em
+
+  &--light
+    color $light-btn-color
+    background $light-btn-bg
+    border-bottom $light-btn-bottom
+
+    &:hover
+      background $light-btn-bg-hover
+      border-bottom $light-btn-hover-bottom
+      box-shadow 0 2px 5px 0 rgba(0,0,0,0.15)
+
+    &:active
+      border 1px solid #ccc
+      background $light-btn-bg-active
+      box-shadow inset 0 0 4px rgba(0,0,0,0.05)
+
+  &--dark
+    color $dark-btn-color
+    background $dark-btn-bg
+    border-bottom $dark-btn-bottom
+
+    &:hover
+      background $dark-btn-bg-hover
+      border-bottom $dark-btn-hover-bottom
+      box-shadow 0 2px 5px 0 rgba(0,0,0,0.25)
+
+    &:active
+      border 1px solid #727272
+      background $dark-btn-bg-active
+      box-shadow inset 0 0 4px rgba(0,0,0,0.15)
+
+  &--cyan
+    color #759f87
+    background #b9e9ce
+    border-bottom 2px solid #759f87
+
+    &:hover
+      background #caf3db
+      border-bottom 4px solid #759f87
+      box-shadow 0 2px 5px 0 rgba(0,0,0,0.25)
+
+    &:active
+      border 1px solid #759f87
+      background #a5dabc
+      box-shadow inset 0 0 4px rgba(0,0,0,0.25)
+
+  &:focus
+    outline 0
+

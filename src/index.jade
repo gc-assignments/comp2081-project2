@@ -1,0 +1,69 @@
+extends ./layouts/main.jade
+
+block title
+  title Sublime Text: The text editor you'll fall in love with
+
+block content
+  nav#navbar(role="navigation")
+    .container
+      .nav-links
+        a(href="/") Sublime Text
+      .brand-icon
+        img.img-1(src="img/sublime-icon.png", alt="Sublime Text Icon")
+      .nav-links
+        a(href="blog.html") Blog
+        a(href="donwload.html") Download
+        a(href="support.html") Support
+        a(href="buy.html") Buy
+
+  .landing
+    .container
+      header.home-header
+        .header-links
+          a.link-active(href="/") Sublime Text
+        .header-links.pull-right
+          a(href="blog.html") Blog
+          a(href="donwload.html") Download
+          a(href="support.html") Support
+          a(href="buy.html") Buy
+
+      .row.col-4-5
+        .col-1.col-md-2-3
+          .brand.align-center
+            img.brand-logo(src="img/sublime-icon.png", alt="Home Sublime Text Icon")
+            h1.brand-name Sublime Text 
+            h3.tag-line Powerful . Fast . Mordern . Text Editor
+        .col-1.col-md-1-3
+          .action-buttons
+            button.btn.btn--dark Download
+            button.btn.btn--light Buy
+
+      .row.align-center
+        img.main-screenshot(src="img/main-screenshot.png", alt="Sublime Text 3 screen shot")
+
+  .features.container
+    h2.feature-title.align-center What users love about Sublime Text
+    .row
+      .col-1.col-md-1-2
+        h3.feature-name Goto Anything
+        img.img-1(src="img/feature-screenshot1.jpg", alt="Screenshot demonstrating 'Goto anything' Feature")
+        p Use Goto Anything to open files with only a few keystrokes, and instantly jump to symbols, lines or words. 
+        p Triggered with ⌘P
+
+      .col-1.col-md-1-2
+        h3.feature-name Multiple Selection
+        img.img-1(src="img/feature-screenshot2.jpg", alt="Screenshot demonstrating 'Goto anything' Feature")
+        p Multiple selections allow you to interactively change many lines at once, rename variables with ease, and manipulate files faster than ever. 
+        p Try pressing ⇧⌘L to split the selection into lines and ⌘D to select the next occurrence of the selected word.
+
+      .col-1.col-md-1-2
+        h3.feature-name Command Palette
+        img.img-1(src="img/feature-screenshot3.jpg", alt="Screenshot demonstrating 'Goto anything' Feature")
+        p The Command Palette holds infrequently used functionality, like sorting, changing the syntax and changing the indentation settings. 
+        p Show the Command Palette with ⌘⇧P.
+
+      .col-1.col-md-1-2
+        h3.feature-name Customize Anything
+        img.img-1(src="img/feature-screenshot4.jpg", alt="Screenshot demonstrating 'Goto anything' Feature")
+        p Key Bindings, Menus, Snippets, Macros, Completions and more - just about everything in Sublime Text is customizable with simple JSON files. This system gives you flexibility as settings can be specified on a per-file type and per-project basis.
+
