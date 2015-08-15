@@ -22,21 +22,40 @@ block content
       span  Blog
 
     .container
-      .col-1.posts
-        article.post
-          p.post-date March 25, 2015
-          h2.post-title Sublime Text 3 File Indexing
+      .col-1.col-posts
+        .posts
+          article.post
+            p.post-date March 25, 2015
+            h2.post-title Sublime Text 3 File Indexing
+            p Some of the core features in Sublime Text 3 are Goto Definition and Goto Symbol in Project. Both of these work by indexing the files in the current project to determine where each symbol is defined.
+            p When indexing is in progress, several low priority background processes will be launched to do the work, and a progress indicator will be shown on the status bar. In general, even for large projects, indexing should take only a few seconds, and be unobtrusive.
+            p However, things can go wrong, so if you're seeing high CPU usage in Sublime Text 3, then file indexing is the first thing to look at. There are two things that can cause excess CPU usage from the indexing:
+            ul
+              li A corrupted index. Various events can cause the index itself to become corrupted, and when this happens, Sublime Text will do the indexing work, but be unable to write the results to disk, so it'll start again in the near future. The next build of Sublime Text will handle this situation more gracefully, but in the mean time you can check this for yourself: if the index is corrupted, there will be a log message in the console (accessible from the View/Show Console menu), which indicates which directory needs to be deleted to reset the index.
+              li Some files. File indexing works by applying syntax highlighting rules to each file, and then extracting everything that looks like a symbol. The syntax highlighting rules are regex based, and some combinations of rules and files can cause the parsing to take a long time. See below to find out what's going on, and then consider adding the files to the index_exclude_patterns setting.
+            p To see when files are being indexed, you can enter sublime.log_indexing(True) in Sublime Text's console. This will trigger Sublime Text to start logging relevant information whenever it indexes files.
+            p To disable file indexing altogether, you can set the index_files setting to false.
+            h5.post-author Jon Skinner
           hr
-          p Some of the core features in Sublime Text 3 are Goto Definition and Goto Symbol in Project. Both of these work by indexing the files in the current project to determine where each symbol is defined.
-          p When indexing is in progress, several low priority background processes will be launched to do the work, and a progress indicator will be shown on the status bar. In general, even for large projects, indexing should take only a few seconds, and be unobtrusive.
-          p However, things can go wrong, so if you're seeing high CPU usage in Sublime Text 3, then file indexing is the first thing to look at. There are two things that can cause excess CPU usage from the indexing:
-          ul
-            li A corrupted index. Various events can cause the index itself to become corrupted, and when this happens, Sublime Text will do the indexing work, but be unable to write the results to disk, so it'll start again in the near future. The next build of Sublime Text will handle this situation more gracefully, but in the mean time you can check this for yourself: if the index is corrupted, there will be a log message in the console (accessible from the View/Show Console menu), which indicates which directory needs to be deleted to reset the index.
-            li Some files. File indexing works by applying syntax highlighting rules to each file, and then extracting everything that looks like a symbol. The syntax highlighting rules are regex based, and some combinations of rules and files can cause the parsing to take a long time. See below to find out what's going on, and then consider adding the files to the index_exclude_patterns setting.
-          p To see when files are being indexed, you can enter sublime.log_indexing(True) in Sublime Text's console. This will trigger Sublime Text to start logging relevant information whenever it indexes files.
-          p To disable file indexing altogether, you can set the index_files setting to false.
+          article.post
+            p.post-date March 24, 2015
+            h2.post-title Sublime Text 3 Build 3080
+            p Build 3080 is now available, with many fixes, improvements and new features. Full details, and downloads, are on the
+              a(href="/")  Sublime Text 3
+              |  page.
+            p Sublime Text 3, while still technically in beta, is the recommended version of Sublime Text to use: compared to Sublime Text 2, it's faster, more polished, and of course, has a lot of extra functionality.
+              a(href="#download")  Download
+              |  it now and give it a try!
+            p There will be more Sublime Text 3 builds coming in the near future. If you're a registered user, you can get early access by using one of the
+              a(href="#dev-builds")  Dev Builds
+              |  . New dev builds are announced and discussed on the
+              a(href="#forum")  Forum
+              |  - there's generally a new one each week.
+            h5.post-author Jon Skinner
+        .btn-wrap
+          button.btn.btn--light.btn--small Older Posts >
 
-      aside.col-1.blog-archives
+      aside.col-1.col-archives.blog-archives
         h4 Archives
         ul.no-li-style
           li.archive-item: a(href="#March_2015") March 2015

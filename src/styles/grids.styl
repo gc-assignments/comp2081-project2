@@ -1,8 +1,12 @@
-md-width = xm(720)
+sm-width = xm(720)
+md-width = xm(960)
+lg-width = xm(1280)
 
 .container
   center(pad: 1em)
   @media(min-width md-width)
+    center(pad: 2.5em)
+  @media(min-width lg-width)
     center(pad: 5em)
 
 .row

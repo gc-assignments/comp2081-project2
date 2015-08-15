@@ -15,7 +15,9 @@ a
     color $_link-hover-color
 
 h1
-  font-size xm(72)
+  font-size xm(48)
+  @media(min-width md-width)
+    font-size xm(72)
 
 h2
 h3
@@ -24,7 +26,9 @@ a
   font-weight 300
 
 h2
-  font-size xm(48)
+  font-size xm(32)
+  @media(min-width md-width)
+    font-size xm(48)
 
 h3
   font-size xm(32)
@@ -45,4 +49,10 @@ li
   font-weight 300
 
 .page-content
-  padding navbar-height 0
+  padding navbar-mobile-height 0 xm(70)
+  @media(min-width sm-width)
+    padding navbar-height 0 xm(100)
+
+hr
+  border-top none
+  border-bottom 1px solid $light-gray

@@ -1,16 +1,40 @@
-// .page-content
-//   edit()
-
+/* BLOG POSTS */
 .posts
   background white
   border-radius 5px
-  box-shadow 0 1px 4px 0 rgba(0,0,0,0.3)
+  box-shadow 0 1px 4px 0 rgba(0,0,0,0.2)
+
+.col-posts
+  @media(min-width sm-width)
+    col(7/10)
   @media(min-width md-width)
-    col(7/12)
-    shift(1/12)
+    col(7/10, gutter: 5)
+  @media(min-width lg-width)
+    col(2/3)
+    shift(1/16)
 
 .post
-  padding 2em
+  padding 1em 1.25em 2em
+  @media(min-width md-width)
+    padding 2em 5em 4em
+
+.post-date
+  color $mid-gray
+
+.post-title
+  border-bottom 1px solid $light-gray
+
+.post-author
+  color $mid-gray
+
+/* BLOG ARCHIVE */
+.col-archives
+  @media(min-width sm-width)
+    col(3/10)
+  @media(min-width md-width)
+    col(3/10, gutter: 7)
+  @media(min-width lg-width)
+    col(2/10, offset: 1/12)
 
 .blog-archives
   background $dark-gray
@@ -18,10 +42,9 @@
   border-radius 5px
   padding-bottom 3em
   box-shadow 0 1px 4px 0 rgba(0,0,0,0.71)
-  @media(min-width md-width)
-    col(2/10, offset: 1/8)
 
   >h4
+    padding-top 1em
     font-size xm(24)
     font-weight 300
     color $orange
