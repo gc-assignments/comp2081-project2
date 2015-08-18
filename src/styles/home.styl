@@ -1,9 +1,17 @@
 .landing
   // edit()
-  min-height 100vh
+  padding-bottom 2em
+  @media(min-width sm-width)
+    padding-bottom 0
+    min-height 100vh
   max-height xm(940)
   background #fad961
   background linear-gradient(to bottom, #fad961 0%,#f76b1c 100%)
+
+.brand-icon
+  width xm(50)
+  @media(min-width sm-width)
+    display none
 
 .brand-logo
   vertical-align top
@@ -12,9 +20,13 @@
   margin-left -.5em
   margin-bottom 0
   display inline-block
+  @media(max-width sm-width)
+    margin-top -2em
 
   &::first-letter
-    visibility hidden
+    visibility visible
+    @media(min-width xs-width)
+      visibility hidden
 
 .tag-line
   color white
@@ -36,7 +48,9 @@
     margin xm(100) auto
 
 .feature-title
-  margin 1em auto .5em
+  margin -1em auto .5em
+  @media(min-width lg-width)
+    margin 1em auto .5em
 
 .feature-name
   margin .75em auto

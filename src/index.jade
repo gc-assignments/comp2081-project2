@@ -4,39 +4,29 @@ block title
   title Sublime Text: The text editor you'll fall in love with
 
 block content
-  nav#navbar(role="navigation")
-    .container
-      .nav-links
-        a(href="/") Sublime Text
-      .brand-icon
-        img.img-1(src="img/sublime-icon.png", alt="Sublime Text Icon")
-      .nav-links
-        a(href="blog.html") Blog
-        a(href="donwload.html") Download
-        a(href="support.html") Support
-        a(href="buy.html") Buy
-
   .landing
     .container
       header.home-header
         .header-links
-          a.link-active(href="/") Sublime Text
-        .header-links.pull-right
+          a.link-active.mobile-hidden(href="/") Sublime Text
+        .brand-icon
+          img.img-1(src="img/sublime-icon.png", alt="Sublime Text Icon")
+        #navbar.header-links.pull-right
           a(href="blog.html") Blog
-          a(href="donwload.html") Download
+          a.mobile-hidden(href="#", data-action="dl") Download
           a(href="support.html") Support
-          a(href="buy.html") Buy
+          a.mobile-hidden(href="#", data-action="buy") Buy
 
       .row.col-4-5
         .col-1.col-md-2-3
           .brand.align-center
-            img.brand-logo(src="img/sublime-icon.png", alt="Home Sublime Text Icon")
+            img.brand-logo.mobile-hidden(src="img/sublime-icon.png", alt="Home Sublime Text Icon")
             h1.brand-name Sublime Text 
             h3.tag-line Powerful . Fast . Mordern . Text Editor
         .col-1.col-md-1-3
-          .action-buttons
-            button.btn.btn--dark.btn--fixed-size Download
-            button.btn.btn--light.btn--fixed-size Buy
+          #main-actions.action-buttons.align-center
+            button.btn.btn--dark.btn--fixed-size(data-action="dl") Download
+            button.btn.btn--light.btn--fixed-size(data-action="buy") Buy
 
       .row.align-center
         img.main-screenshot(src="img/main-screenshot.png", alt="Sublime Text 3 screen shot")

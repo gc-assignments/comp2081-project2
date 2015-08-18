@@ -8,14 +8,15 @@ block content
     .container
       nav(role="navigation")
         .nav-link.v-align
-          a(href="/") Sublime Text
+          a.mobile-hidden(href="/") Sublime Text
         .nav-brand-icon
-          img.img-1(src="img/sublime-icon.png", alt="Sublime Text Icon")
-        .nav-links.v-align
+          a(href="/")
+            img.img-1(src="img/sublime-icon.png", alt="Sublime Text Icon")
+        #navbar.nav-links.v-align
           a.link-active(href="blog.html") Blog
-          a(href="donwload.html") Download
+          a.mobile-hidden(href="#", data-action="dl") Download
           a(href="support.html") Support
-          a(href="buy.html") Buy
+          a.mobile-hidden(href="#", data-action="buy") Buy
 
   main.page-content
     h1.page-title.align-center Sublime

@@ -1,0 +1,43 @@
+#modal.md-modal.md-3d-rotate-bottom
+  .md-content
+    .row.align-center
+      a#buy-tab.tab.tab--active Buy
+      a#dl-tab.tab Download
+    .tab-content-holder
+      #tb-content-1.tab-content
+        h3.align-center Details
+        form
+          .row.form-group
+            label.text-label(for="email") Email: 
+            input.text-input#email(type="email", required)
+          .row.form-group
+            label.text-label(for="name") Name: 
+            input.text-input#name(type="text", required, placeholder="some")
+          p.hint-text This name will appear on the license key
+          label License is for: 
+          input(type="radio", name="type", value="1", checked)
+          | Me
+          input(type="radio", name="type", value="2", checked)
+          | Business
+          a(href="#pay") Continue
+          p Will take you to PayPal
+      #tb-content-2.tab-content.tab-hide
+        h3 Current Version 3.0.3
+        a(href="#download-sublime") Download (OS X 10.6 or later)
+        h4 Other OS
+        .os-options
+          p: a(href="#win") Windows
+            |  - also available as a
+            a(href="#portable-win")  portable version
+          p: a(href="#win64") Windows 64 bit
+            |  - also available as a
+            a(href="#portable-win64")  portable version
+          p: a(href="#linux32") Linux 32 bit
+          p: a(href="#linux64") Linux 64 bit
+    .row.md-footer
+      p: strong Sublime Text may be downloaded and evaluated for free, however a license must be purchased for continued use.
+      p Licenses are per-user, rather than per-machine, so you can enjoy Sublime Text on as many computers and operating systems as you wish with your license.
+        a(href="#more")  More...
+      button#md-close Close
+
+#md-overlay.md-overlay
